@@ -1,0 +1,11 @@
+{% extends 'kerko/search-item.html.jinja2' %}
+
+{% block search_heading_classes %}h2 col-auto mr-auto pr-1 d-inline d-print-none{% endblock %}
+
+{% block search_results %}
+    {%- include "kerko/_pager.html.jinja2" %}
+    <h2 class="h1 rule mb-3 clearfix">
+        {#- Removed badges! -#}
+        {{- title|escape -}}
+    </h2>
+{% endblock search_results %}
