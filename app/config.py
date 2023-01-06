@@ -38,11 +38,13 @@ class Config():
     KERKO_ZOTERO_LOCALE = 'en-GB'
 
     HOME_URL = 'https://is.eved.io'
-    HOME_TITLE = _("is.eved.io")
+    HOME_TITLE = _("Implementation Science")
     # HOME_SUBTITLE = _("...")
 
-    NAV_TITLE = _("Research Database")
-    KERKO_TITLE = _("Research Database")
+    NAV_TITLE = _("Home")
+    KERKO_TITLE = _("Implementation Science")
+    EVED_IO_TITLE = _("eved.io")
+    EVED_IO_LINK = _("https://eved.io")
 
     KERKO_PRINT_ITEM_LINK = True
     KERKO_PRINT_CITATIONS_LINK = True
@@ -105,16 +107,37 @@ class Config():
             )
         )
     )
+
     
-    # KERKO_COMPOSER.add_facet(
-    #     CollectionFacetSpec(
-    #         key='facet_topic',
-    #         filter_key='topic',
-    #         title=_('Topic'),
-    #         weight=10,
-    #         collection_key='4K2WTMCH',
-    #     )
-    # )
+    KERKO_COMPOSER.add_facet(
+        CollectionFacetSpec(
+            key='facet_bibliography',
+            filter_key='bibliography',
+            title=_('Bibliography'),
+            weight=10,
+            collection_key='XWXU8XAB',
+        )
+    )
+    
+    KERKO_COMPOSER.add_facet(
+        CollectionFacetSpec(
+            key='facet_theme',
+            filter_key='theme',
+            title=_('Theme'),
+            weight=20,
+            collection_key='Z27MIXI7',
+        )
+    )
+    
+    KERKO_COMPOSER.add_facet(
+        CollectionFacetSpec(
+            key='facet_location',
+            filter_key='location',
+            title=_('Location'),
+            weight=30,
+            collection_key='5JVH374W',
+        )
+    )
 
 
 class DevelopmentConfig(Config):

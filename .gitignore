@@ -58,3 +58,6 @@ docs/_build/
 
 # Application data.
 data/
+
+#Htpassword
+.htpasswd
