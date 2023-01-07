@@ -111,9 +111,9 @@ class Config():
     
     KERKO_COMPOSER.add_facet(
         CollectionFacetSpec(
-            key='facet_is_bibliography',
-            filter_key='is_bibliography',
-            title=_('Bibliography'),
+            key='facet_proposal',
+            filter_key='proposal',
+            title=_('Our proposal'),
             weight=10,
             collection_key='XWXU8XAB',
         )
